@@ -1,0 +1,19 @@
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div p{
+    font-size:30px;
+    color:#ff4949;
+    text-align: center;
+}
+
+a{
+    margin:0 auto;
+}
+
+button{
+    margin:10px;
+}

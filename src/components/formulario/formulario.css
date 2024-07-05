@@ -1,0 +1,152 @@
+@font-face {
+    font-family:OpenSans;
+    src:url('../../font/OpenSans.ttf') format('truetype');
+}
+a{
+    all:unset;
+}
+
+body{
+    width:100vw;
+    background:#f3f8f9;
+}
+
+form{
+    margin-top:30px;
+}
+
+.error{
+    font-size:15px;
+    color:#fc493c;
+    margin-left:8px;
+    text-align: center;
+    font-family:OpenSans;
+}
+
+.addIcon {
+    display: flex; 
+    cursor:pointer;
+    margin-left:31px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor{
+    
+    display:flex;
+    opacity: 100;
+    transition:0.3s;
+    position:relative;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.contenedores{
+    margin-top:15px;
+    margin-bottom:5px;
+}
+
+.agregados button{
+    width:50%;
+    margin-top:8px;
+    margin-left:0;
+}
+
+.dark-theme .ventanaModal{
+    color:#fff;
+    background:#121420;
+}
+
+.ventanaModal{
+    display:flex;
+    width:100%;
+    opacity: 0;
+    height:100vh;
+    transition:0.3s;
+    background:#fff;
+    align-items: center;
+    animation: entrada 0.5s ease-in-out forwards;
+}
+
+.ventanaModal input{
+    width: 30%;
+
+}
+
+.ventanaModal label{
+    width: 30%;
+}
+
+.botonContenedor{
+    display: flex;
+    flex-direction: row;
+}
+
+label{
+    font-size:12px;
+    font-family:OpenSans;
+    margin-bottom:5px;
+}
+
+select{
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius:20px;
+    padding: 4px;
+    width:110%;
+    height: 40px;
+    font-size:15px;
+    font-family:OpenSans;
+}
+
+.ReactSelect__clearIndicator{
+    background: #fc493c;
+}
+
+.ReactSelect__indicators{
+    position:absolute;
+    top:-14px;
+    right:5px;
+}
+
+option {
+    color:#000;
+    font-size:15px;
+    font-family:OpenSans;
+
+}
+
+.contenedor button{
+
+    border:none;
+    color:#fff;
+    cursor:pointer;
+    font-size: 11px;
+    border-radius:35px;
+    font-family:OpenSans;
+}
+
+.contenedorBotones{
+    width: 100%;
+    margin-left:21px;
+    display: inline-block;
+}
+
+button:disabled,
+button[disabled]{
+    border:none;
+    padding:15px;
+    color:#000;
+    border-radius:35px;
+    font-family:OpenSans;
+}
+
+@keyframes entrada {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1; /* Opacidad final: 1 (completamente opaco) */
+    }
+}
