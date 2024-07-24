@@ -60,7 +60,7 @@ const Formulario = () => {
     const cargandoFormulario = () => {
 
       const dataCargada = getValues()
-
+      console.log(dataCargada)
       if(JSON.stringify(dataCargada) === JSON.stringify(dataActual)){
         actualizarData(dataCargada)
         setDisabledPreview(!isFormValid(getValues))

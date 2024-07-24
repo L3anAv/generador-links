@@ -1,8 +1,10 @@
+import { saveAs } from 'file-saver'
+
 export const onSubmit = async (dataStore, setMostrarLoading) => {
 
-    setMostrarLoading(true)
-
     try {
+      setMostrarLoading(true);
+
       const formResponse = await fetch('http://localhost:5000/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -11,42 +13,41 @@ export const onSubmit = async (dataStore, setMostrarLoading) => {
   
       if (!formResponse.ok) {
         throw new Error(`Error: ${formResponse.statusText}`);
+      }else{
+        return 200
       }
-  
-      // Trigger download after successful form submission
-      await fetchDownload(); // Call the separate function for download
 
     } catch (error) {
       console.error('Error submitting form:', error);
-    }finally {
-      setMostrarLoading(false);
+    }finally{
+      setMostrarLoading(false)
     }
-  };
-  
 
-  // Function to handle download
-  const fetchDownload = async () => {
+  };
+
+
+export const descargarApp = async () => {
+    
     try {
+  
       const downloadResponse = await fetch('http://localhost:5000/descargar');
       
+      console.log('Download response status:', downloadResponse.status);
+  
       if (!downloadResponse.ok) {
-        throw new Error(`Error: ${downloadResponse.statusText}`);
+        throw new Error(`Error downloading file: ${downloadResponse.statusText}`);
       }
-      
-      // Check if the response is intended for download
-      if (downloadResponse.headers.get('Content-Disposition')?.includes('attachment')) {
-        // Trigger browser download
+  
+      if (downloadResponse.status === 200) {
+        
         const blob = await downloadResponse.blob();
-        const fileUrl = URL.createObjectURL(blob);
-        window.open(fileUrl, '_blank');
-        URL.revokeObjectURL(fileUrl); // Cleanup when done
+        const fileName = 'dist.zip'; 
+        saveAs(blob, fileName);
       } else {
-        // Handle non-downloadable responses
         console.warn('Response not formatted for download.');
       }
-
     } catch (error) {
       console.error('Error fetching download data:', error);
-
     }
+
   };
