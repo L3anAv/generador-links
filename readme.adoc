@@ -57,7 +57,7 @@ image:https://skillicons.dev/icons?i=nodejs,express,docker,[]
 
 - https://www.npmjs.com/package/react-hook-form[React Hook Form]: Proporciona un conjunto de hooks personalizados para manejar formularios en React de forma eficiente. 
 
-- https://www.npmjs.com/package/react-select[react-select]: Un componente de selección altamente personalizable para React.
+- https://www.npmjs.com/package/react-select[React Select]: Un componente de selección altamente personalizable para React.
 
 - https://www.npmjs.com/package/styled-components[Styled Components]: Permite escribir estilos CSS directamente en tus componentes de JavaScript. 
 
