@@ -5,7 +5,7 @@ export const onSubmit = async (dataStore, setMostrarLoading) => {
     try {
       setMostrarLoading(true);
 
-      const formResponse = await fetch('https://mis-links-generador.onrender.com/', {
+      const formResponse = await fetch('http://localhost:5000/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(dataStore),
@@ -30,7 +30,7 @@ export const descargarApp = async () => {
     
     try {
   
-      const downloadResponse = await fetch('https://mis-links-generador.onrender.com/descargar');
+      const downloadResponse = await fetch('http://localhost:5000/descargar');
       
       console.log('Download response status:', downloadResponse.status);
   
@@ -39,7 +39,7 @@ export const descargarApp = async () => {
       }
   
       if (downloadResponse.status === 200) {
-        
+  
         const blob = await downloadResponse.blob();
         const fileName = 'dist.zip'; 
         saveAs(blob, fileName);
