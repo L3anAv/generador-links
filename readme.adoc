@@ -5,6 +5,16 @@ Author <leanav.dev@gmail.com>, {docdate}.
 
 App para automatizar la creación de una página simple de links, estilo linktr.ee.
 
+== Breve resumen del proyecto.
+
+El proyecto empezó siendo un CLI para la terminal en el cual se elegia atravez de ella opciones, luego de terminar de elegir se buildeaba localmente la app de links.
+
+Ahora luego de repensar la idea, se puede usar una web app que utiliza el backend de la rama main desplegado en render.com atravez de un dockerfile. 
+
+Para consultar la API REST podes dirigirte al https://github.com/l3anav/mis-links-generador[Repositorio].
+
+El CLI se puede descargar desde la https://github.com/L3anAv/mis-links-generador/tree/con-terminal[rama con Terminal].
+
 == Uso
 &#13;
 
@@ -30,26 +40,12 @@ _* Los archivos descargados no se guardan en el servidor._
 == Stack
 &#13;
 
-==== Frontend
-&#13;
-
-image::https://skillicons.dev/icons?i=react,vite,styledcomponents[]
+image::https://skillicons.dev/icons?i=react,vite,styledcomponents,pnpm,powershell[]
 
 > Desplegado en vercel.com.
 
-==== Backend
-&#13;
-
-image:https://skillicons.dev/icons?i=nodejs,express,docker,[]
-
-> Desplegado en render.com.
-
-
 
 == Librerias
-&#13;
-
-==== Frontend
 &#13;
 
 [square]
@@ -57,30 +53,12 @@ image:https://skillicons.dev/icons?i=nodejs,express,docker,[]
 
 - https://www.npmjs.com/package/react-hook-form[React Hook Form]: Proporciona un conjunto de hooks personalizados para manejar formularios en React de forma eficiente. 
 
-- https://www.npmjs.com/package/react-select[react-select]: Un componente de selección altamente personalizable para React.
+- https://www.npmjs.com/package/react-select[React Select]: Un componente de selección altamente personalizable para React.
 
 - https://www.npmjs.com/package/styled-components[Styled Components]: Permite escribir estilos CSS directamente en tus componentes de JavaScript. 
 
 - https://www.npmjs.com/package/wouter[Wouter]: Una biblioteca de enrutamiento sencilla y flexible para React. 
 
 - https://www.npmjs.com/package/zustand[Zustand]: Un mini gestor de estado para proyectos React.
-
-
-==== Backend
-&#13;
-
-[square]
-- https://www.npmjs.com/package/adm-zip[Adm Zip]: Biblioteca para manipular archivos ZIP en Node.js. Permite crear, leer y modificar archivos ZIP.
-
-- https://www.npmjs.com/package/body-parser[Body Parser]: Middleware para Express que analiza el cuerpo de las solicitudes HTTP entrantes. 
-Es esencial para procesar datos enviados desde formularios HTML.
-
-- https://www.npmjs.com/package/cors[Cors]: Middleware para Express que permite habilitar CORS (Cross-Origin Resource Sharing), lo que es necesario para que aplicaciones de diferentes orígenes se comuniquen entre sí.
-
-- https://www.npmjs.com/package/express[Express]: Framework minimalista y flexible para crear aplicaciones web en Node.js. Es la base de muchas aplicaciones web modernas.
-
-- https://www.npmjs.com/package/fs[fs]: Módulo de Node.js que proporciona una interfaz para interactuar con el sistema de archivos. Permite leer, escribir y eliminar archivos y directorios.
-
-- https://www.npmjs.com/package/path[Path]: Módulo de Node.js que proporciona utilidades para trabajar con rutas de archivos y directorios. Es útil para construir rutas de forma dinámica.
 
 
