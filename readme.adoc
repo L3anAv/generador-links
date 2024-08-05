@@ -9,11 +9,11 @@ App para automatizar la creación de una página simple de links, estilo linktr.
 
 El proyecto empezó siendo un CLI para la terminal en el cual se elegia atravez de ella opciones, luego de terminar de elegir se buildeaba localmente la app de links.
 
-Ahora luego de repensar la idea, se puede usar una web app que utiliza el backend de la rama main desplegado en render.com atravez de un dockerfile. 
+Ahora luego de repensar la idea, se puede usar una web app que utiliza el backend de la rama main del respositorio mis-likns-generador, desplegado en render.com atravez de un dockerfile. 
 
 Para consultar la API REST podes dirigirte al https://github.com/l3anav/mis-links-generador[Repositorio].
 
-El CLI se puede descargar desde la https://github.com/L3anAv/mis-links-generador/tree/con-terminal[rama con Terminal].
+El CLI se puede descargar desde la https://github.com/L3anAv/mis-links-generador/tree/con-terminal[Rama con Terminal].
 
 == Uso
 &#13;
