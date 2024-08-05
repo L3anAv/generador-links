@@ -1,3 +1,8 @@
+@font-face {
+    font-family:OpenSans;
+    src:url('../../font/OpenSans.ttf') format('truetype');
+}
+
 :root
 {
     /* Light theme Colors vars */
@@ -142,4 +147,20 @@ body{
 
 h1{
     text-align: center;
+}
+
+footer{
+    margin-top:20px;
+    margin-left:30px;
+    text-align: center;
+    font-family: OpenSans;
+}
+
+footer a{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+footer span{
+    font-size:0.8rem;
 }

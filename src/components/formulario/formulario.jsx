@@ -137,7 +137,7 @@ const Formulario = () => {
         <div className='contenedores'>
           <label htmlFor="Nombre">Los links de:</label>
           <Inputs bordercolor={colorFill} type="text" {...register('Nombre', { required: 'El nombre es obligatorio' })} />
-          {errors.Nombre && <span className="error">Ingresa tu nombre completo</span>}
+          {errors.Nombre && <span className="error">Ingresa tu nombre para la web de links.</span>}
         </div>
   
         <div className='contenedores'>

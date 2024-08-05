@@ -1,10 +1,10 @@
 import { saveAs } from 'file-saver'
 
-export const onSubmit = async (dataStore, setMostrarLoading) => {
+export const onSubmit = async (dataStore, setMostrarLoading, setMostrarBuildeando) => {
 
     try {
       setMostrarLoading(true);
-
+      setMostrarBuildeando(true)
       const formResponse = await fetch('http://localhost:5000/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -12,6 +12,7 @@ export const onSubmit = async (dataStore, setMostrarLoading) => {
       });
   
       if (!formResponse.ok) {
+        setMostrarBuildeando(false)
         throw new Error(`Error: ${formResponse.statusText}`);
       }else{
         return 200
@@ -21,20 +22,22 @@ export const onSubmit = async (dataStore, setMostrarLoading) => {
       console.error('Error submitting form:', error);
     }finally{
       setMostrarLoading(false)
+      setMostrarBuildeando(false)
     }
 
   };
 
 
-export const descargarApp = async () => {
+export const descargarApp = async (setMostrarDescarga) => {
     
     try {
-  
+      setMostrarDescarga(true)
       const downloadResponse = await fetch('http://localhost:5000/descargar');
       
       console.log('Download response status:', downloadResponse.status);
   
       if (!downloadResponse.ok) {
+        setMostrarDescarga(false)
         throw new Error(`Error downloading file: ${downloadResponse.statusText}`);
       }
   
@@ -48,6 +51,8 @@ export const descargarApp = async () => {
       }
     } catch (error) {
       console.error('Error fetching download data:', error);
+    }finally{
+      setMostrarDescarga(false)
     }
 
   };

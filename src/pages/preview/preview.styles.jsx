@@ -6,6 +6,11 @@ export const Contenedor = styled.div`
   display:flex;
 `
 
+export const TextoParaLoading = styled.p`
+  font-size:1.2rem;
+  color:${props => props.theme === 'claro' ? '#000' : '#fff'};
+`
+
 export const ContenedorBotones = styled.div`
 
   display:flex;
