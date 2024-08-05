@@ -5,6 +5,8 @@ Author <leanav.dev@gmail.com>, {docdate}.
 
 App para automatizar la creación de una página simple de links, estilo linktr.ee.
 
+image::web-ui.png[]
+
 == Breve resumen del proyecto.
 
 El proyecto empezó siendo un CLI para la terminal en el cual se elegia atravez de ella opciones, luego de terminar de elegir se buildeaba localmente la app de links.
