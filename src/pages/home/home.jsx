@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Formulario from '../../components/formulario/formulario'
 
 const Titulo = styled.h1`
+  z-index:1;
   font-size:25px;
   text-align:left;
   margin-left:15px;

@@ -48,7 +48,10 @@ const Formulario = () => {
     // Referencias a inputs para ingresar nuevos valores
     const inputNuevoValor = useRef(null)
     const inputNuevoNombre = useRef(null)
-    
+
+    //Ref
+    const ventanaModal = useRef()
+
     // Estados
     const [colorFill, setColorFill] = useState('#0080ff')
     const [agregarSeccion, setagregarSeccion] = useState(false)
@@ -69,6 +72,31 @@ const Formulario = () => {
       }
 
     }
+
+    const handlerAgregarNuevaSeccion = () => {
+      
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+
+      setagregarSeccion(true)
+      
+    }
+
+    const handleClickCerrarSeccion = async () => {
+      
+      ventanaModal.current.style.animation = "salida 0.5s ease-in-out forwards"
+      
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
+      setagregarSeccion(false);
+
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+      });
+    };
 
     // Use Effects
     // Para estado inicial del formulario
@@ -120,14 +148,14 @@ const Formulario = () => {
       <div className='contenedor'>
         
       {agregarSeccion &&
-        <div className='ventanaModal'>
+        <div className='ventanaModal' ref={ventanaModal}>
           <label>Nombre de nuevo Boton:</label>
           <Inputs bordercolor={colorFill} type="text" ref={inputNuevoNombre} />
           <label>Link hacia:</label>
           <Inputs bordercolor={colorFill} type="text" ref={inputNuevoValor} defaultValue={'https://'}/>
           <div className='botonContenedor'>
             <button className={butttonClass} onClick={() => handleNombreNuevaSeccion(inputNuevoNombre, inputNuevoValor, append, setagregarSeccion)}>Agregar</button>
-            <button className={butttonClass} onClick={() => setagregarSeccion(false)}>Cerrar</button>
+            <button className={butttonClass} onClick={() => handleClickCerrarSeccion()}>Cerrar</button>
           </div>
         </div>
       }
@@ -198,7 +226,7 @@ const Formulario = () => {
             )
         })}
 
-        <div className='contenedores addIcon'onClick={() => setagregarSeccion(true)}>
+        <div className='contenedores addIcon'onClick={() => handlerAgregarNuevaSeccion()}>
           <AddIcon colorPath={colorFill}/>
           <div className='contenedores'>{errorNoExistenRedes && <span className='error'>Agregue una red con el simbolo `+`</span>}</div>
         </div>

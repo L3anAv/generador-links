@@ -6,6 +6,12 @@ export const handleNombreNuevaSeccion = (inputNuevoNombre, inputNuevoValor, appe
   
     append({"nombre": nombreSeccionNueva, "ruta": valorSeccionnNueva})
     setagregarSeccion(false)
+
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+    });
+
 }
 
 // Para eliminar una red agregada

@@ -63,10 +63,10 @@ form{
     display:flex;
     width:100%;
     opacity: 0;
-    height:100vh;
+    height:40vh;
     transition:0.3s;
-    background:#fff;
     align-items: center;
+    background:transparent;
     animation: entrada 0.5s ease-in-out forwards;
 }
 
@@ -148,6 +148,15 @@ button[disabled]{
       opacity: 0;
     }
     100% {
-      opacity: 1; /* Opacidad final: 1 (completamente opaco) */
+      opacity: 1; 
     }
+}
+
+@keyframes salida {
+    0% {
+      opacity: 1; 
+    }
+    100% {
+        opacity: 0;
+      }
 }
