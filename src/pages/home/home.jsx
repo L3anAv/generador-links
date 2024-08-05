@@ -13,7 +13,7 @@ const Home = () => {
 
   return (
     <>
-    <Titulo>⛓ Generador: Links Web</Titulo>
+    <Titulo>Generador Web Links</Titulo>
     <Formulario />
     <footer>Hecho por <a href="https://github.com/l3anav" target='_blanck'>L3anav</a> con 💘<br/><span>2024</span></footer>
     </>
